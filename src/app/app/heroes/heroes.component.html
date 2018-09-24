@@ -1,0 +1,18 @@
+<h2 class="title"> 
+ My hero is {{ hero.name }}!
+</h2>
+
+<h2>
+  Her skills are:
+
+  <p *ngFor = "let skill of hero.skills">
+    {{skill}}
+  </p>
+  <!-- His first skill is: {{ hero.skills[0]}}!  hien thi 1 skill -->
+  <!-- Hien thi nhieu skill -->
+</h2>
+<p>
+  <!-- <input type="text" value="{{hero.name}}"> -->
+  Hero name:
+  <input type="text" [(ngModel)]="hero.name">
+</p>
