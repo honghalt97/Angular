@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Hero} from '../entities/hero';
 @Component({
   selector: 'app-heroes',
@@ -6,16 +6,19 @@ import {Hero} from '../entities/hero';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-
-  hero: Hero;
-  constructor() {
+  
+  @Input() hero: Hero; 
+  constructor() 
+  {
     this.hero = new Hero();
     this.hero.name = 'Le Hong Ha';
     this.hero.skills = ['beauty', 'cute'];
-   }
+  }
 
   title = 'Heroes';
   ngOnInit() {
   }
+
+  
 
 }

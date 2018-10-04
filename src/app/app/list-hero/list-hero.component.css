@@ -1,0 +1,24 @@
+.title
+{
+    color: blue;
+}
+b
+{
+    background: linear-gradient(#fd3a06,#ed9f07);;
+    color: black;
+}
+
+.app-heroes
+{
+    float: left;
+    
+}
+.heroes-skills
+{
+    float: right;
+}
+
+.selected b
+{
+    color: purple;
+}
