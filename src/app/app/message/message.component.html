@@ -1,0 +1,10 @@
+<div>
+
+  <h2>Messages</h2>
+  <button class="clear"
+          (click)="clear1()">clear</button>
+  <div *ngFor='let Messages of message'> {{Messages}} </div>
+
+</div>
+
+  <!-- <input #box (keyup)="messageService.add(box.value)"> -->

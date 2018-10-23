@@ -17,8 +17,15 @@ export class ListHeroComponent implements OnInit {
     // this.listHeroes = ListHeroes;
   }
   ngOnInit() {
-    this.listHeroes = this.heroServices.getHeroes();
+    //this.listHeroes = this.heroServices.getHeroes();
+    this.heroServices.getHeroes().subscribe(
+       x => {
+        this.listHeroes = x},
+        error => {
+          console.log('error!');
+        }  
 
+    );
     //get hero by ID
     this.selectedHero = this.heroServices.getHeroesByID(1);
 
@@ -26,6 +33,6 @@ export class ListHeroComponent implements OnInit {
 
   //Khai bao 1 dinh nghia ham
   onSelect(hero: Hero): void {
-    this.selectedHero = hero;
+    this.selectedHero = this.heroServices.getHeroesByID(hero.id);
   }
 }
